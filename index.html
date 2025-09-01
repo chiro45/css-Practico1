@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TPs Maquetación – Header, Botones y Tarjeta de Producto (RESUELTO)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ================= HEADER RESPONSIVO ================= -->
+    <header class="site-header" id="top">
+        <div class="site-header__container container">
+            <a href="#top" class="site-header__logo" aria-label="Inicio">
+                <span class="site-header__mark" aria-hidden="true">M</span>
+                <span>MiTienda</span>
+            </a>
+
+            <!-- NAV desktop -->
+            <nav class="site-header__nav nav" aria-label="Principal">
+                <ul class="nav__list" id="navListDesktop">
+                    <li><a class="nav__link" href="#novedades">Novedades</a></li>
+                    <li><a class="nav__link" href="#ofertas">Ofertas</a></li>
+                    <li><a class="nav__link" href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botón hamburguesa -->
+            <button class="site-header__toggle nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <img src="./images/menu-deep.svg" />
+            </button>
+        </div>
+
+    </header>
+
+    <!-- ================= CONTENIDO ================= -->
+    <main>
+        <div class="main__grid container">
+
+            <!-- Sistema de Botones -->
+            <section class="panel">
+                <h2 id="t-botones"> 1) Sistema de Botones</h2>
+                <p class="code-note">Base + variantes. Observa padding, radio, foco, hover/active. Usa
+                    <strong>Flex</strong>
+                    para el grupo.
+                </p>
+                <div class="btn-group">
+                    <button class="btn btn--primary">Primario</button>
+                    <button class="btn btn--secondary">Secundario</button>
+                    <button class="btn btn--outline">Outline</button>
+                    <button class="btn btn--danger">Peligro</button>
+                    <button class="btn btn--primary btn--icon" aria-label="Buscar">
+                        <img src="./images/search.svg" />
+                        <span>Con ícono</span>
+                    </button>
+                    <button class="btn" disabled>Deshabilitado</button>
+                </div>
+            </section>
+
+            <!-- Tarjeta de Producto -->
+            <section class="panel" aria-labelledby="t-producto">
+                <h2 id="t-producto">2) Tarjeta de Producto</h2>
+                <p class="code-note">Semántica con <code>&lt;article&gt;</code>, <code>&lt;figure&gt;</code> y
+                    <code>&lt;data&gt;</code>.
+                    Composición con <strong>Grid</strong> y CTAs con <strong>Flex</strong>.
+                </p>
+
+                <article class="product-card" aria-labelledby="prod-1-title">
+                    <div class="product-card__media">
+                        <span class="product-card__badge">Nuevo</span>
+                        <img src="./images/zapatillas.webp"
+                            alt="Zapatillas deportivas color azul con detalles blancos" />
+                    </div>
+                    <div class="product-card__info">
+                        <h3 class="product-card__title" id="prod-1-title">Zapatillas Runner Pro</h3>
+                        <p class="product-card__desc">Amortiguación ligera, malla respirable y suela antideslizante.
+                            Perfectas para entrenar todos los días.</p>
+
+                        <div class="product-card__price-row">
+                            <data class="product-card__price" value="24999">$ 24.999</data>
+                            <span class="product-card__old-price">$ 29.999</span>
+                        </div>
+
+                        <div class="product-card__cta-row" role="group" aria-label="Acciones de compra">
+                            <button class="btn btn--primary">Comprar ahora</button>
+                            <button class="btn btn--outline btn--icon"
+                                aria-label="Añadir Zapatillas Runner Pro al carrito">
+                                <img src="/images/add.svg">
+                                <span>Añadir</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+        </div>
+
+
+        <!-- Secciones de ejemplo para anclas -->
+        <section class="container" id="novedades">
+            <div class="panel">
+                <h2>Novedades</h2>
+                <p class="code-note">Sección de relleno para probar el menú.</p>
+            </div>
+        </section>
+
+        <section class="container" id="ofertas">
+            <div class="panel">
+                <h2>Ofertas</h2>
+                <p class="code-note">Otra sección de relleno.</p>
+            </div>
+        </section>
+
+        <section class="container" id="contacto">
+            <div class="panel">
+                <h2>Contacto</h2>
+                <p class="code-note">Más contenido de ejemplo.</p>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>
