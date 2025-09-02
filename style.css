@@ -32,8 +32,9 @@
 body {
   font-family: system-ui, -apple-system;
   line-height: 1.5;
-  color: #0f172a;
-  background: #f8fafc;
+  color: var(--text);
+
+  background: var(--bg);
 }
 
 /* ================= LAYOUT ================= */
@@ -211,8 +212,6 @@ main {
 
 .product-card__media {
   position: relative;
-  aspect-ratio: 4/3;
-  overflow: hidden;
 }
 .product-card__media img {
   width: 100%;
@@ -222,10 +221,10 @@ main {
 }
 .product-card__badge {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 2%;
+  left: 2%;
   background-color: #f59e0b;
-  color: #111827;
+  color: var(--text);
   font-weight: 900;
   font-size: 0.85rem;
   padding: 6px 10px;
@@ -234,20 +233,19 @@ main {
 }
 .product-card__info {
   padding: var(--space-6);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: var(--space-4);
 }
 .product-card__title {
-  margin: 0;
   font-size: 1.25rem;
 }
 .product-card__desc {
-  margin: 0;
   color: var(--muted);
 }
 .product-card__price-row {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: var(--space-3);
 }
 .product-card__price {
@@ -260,8 +258,12 @@ main {
 }
 .product-card__cta-row {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   gap: var(--space-3);
+}
+.product-card__cta-row button {
+  width: 100%;
 }
 
 /* ================= RESPONSIVO ================= */
